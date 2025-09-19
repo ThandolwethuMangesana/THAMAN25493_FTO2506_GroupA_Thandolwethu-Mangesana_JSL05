@@ -119,6 +119,26 @@ header {
   display: none; /* Hidden on desktop; shown on smaller screens */
 }
 
+.add-NewTask {
+  align-items: center;
+  font-family: inherit;
+  display: flex;
+  background-color: #635fc7;
+  color: #fff;
+  border: none;
+  border-radius: 48px 48px 48px 48px;
+  padding: 24px;
+  height: 48px;
+  width: 164px;
+  left: 915px;
+  top: 20px;
+  font-size: 15px;
+  font-style: white;
+  font-weight: bold;
+  line-height: 100%;
+  margin-left: 2px;
+}
+
 /* ===============
    Board Columns
 ================ */
@@ -344,6 +364,7 @@ form select {
     font-weight: 700;
   }
 
+
   .container {
     padding: 0;
     width: 100%;
@@ -396,6 +417,19 @@ form select {
     ); /* Stack columns in single column */
   }
 
+  /*add task mobile button*/
+.add-NewTask {   
+  width: 30px;
+  height: 30px;
+  top: 16px;
+  left: 313px;
+  border-radius: 24px;
+  text-align: center;
+  font-size: 15px;
+  font-weight: 700;
+  font-style: white;
+
+}
   .column-div {
     padding: 24px;
   }
