@@ -109,28 +109,28 @@
     </dialog>
 
     <!--New task Modal-->
-  <dialog id="add-task-modal">
-      <form method="add-task-dialog" id="add-task-modal">
-        <div class="add-task-modal-header">
+  <dialog id="addtask-modal">
+      <form method="addtask-dialog" id="addtask-modal">
+        <div class="addtask-modal-header">
           <h3>add New Task</h3>
-          <button type="button" class="add-task-close-btn" id="add-task-close-modal-btn">
+          <button type="button" class="addtask-close-btn" id="addtask-close-modal-btn">
             &times;
           </button>
         </div>
 
-        <label for="add-task-title">Title</label>
+        <label for="addtask-title">Title</label>
         <input type="text" placeholder="e.g. Go for a walk" id="addtask-title" name="title" required />
 
-        <label for="add-task-desc">Description</label>
+        <label for="addtask-desc">Description</label>
         <textarea placeholder="After completing JavaScript challenges, go out for a walk to unwind" id="addtask-desc"  name="description" rows="4"></textarea>
 
-        <label for="add-task-status">Status</label>
-        <select id="add-task-status" name="status" required>
+        <label for="addtask-status">Status</label>
+        <select id="addtask-status" name="status" required>
           <option value="todo">todo</option>
           <option value="doing">doing</option>
           <option value="done">done</option>
         </select>
-        <button type="button" class="create-task-btn" id="create-task-btn" >Create task</button>
+        <button type="button" class="createtask-btn" id="createtask-btn" >Create task</button>
       </form>
     </dialog>
 
