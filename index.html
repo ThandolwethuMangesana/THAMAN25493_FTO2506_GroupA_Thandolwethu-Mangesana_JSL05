@@ -15,6 +15,7 @@
       href="./assets/favicon.svg"
     />
     <script defer src="./scripts.js" type="module"></script>
+     <script src="https://cdn.tailwindcss.com"></script>
     <title>Kanban Task Management</title>
   </head>
 
@@ -44,12 +45,11 @@
             Launch Career
           </h2>
         </div>
-        <div class="add-task-btn-div">
-  <button id="add-task-btn" class="add-task-btn">+ Add New Task</button>
-  <button id="add-task-btn" class="floating-add-btn" aria-label="Add New Task">
-  +
+        <button id="add-task-btn" class="add-task-btn flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[#635fc7] text-white font-semibold hover:bg-[#4e4ab3] transition-all duration-300">
+  <span class="text-xl">+</span>
+  <span class="hidden md:inline">Add New Task</span>
 </button>
-</div>
+
       </header>
 
       <div class="container">

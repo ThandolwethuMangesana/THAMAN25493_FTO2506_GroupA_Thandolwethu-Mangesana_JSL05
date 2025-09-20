@@ -306,32 +306,6 @@ form select {
   padding-right: 1rem;
 }
 
-/*===============
-Add task button
-=================*/
-
-.add-task-btn-div {
-  margin-left: auto;
-  display: flex;
-  align-items: center;
-}
-
-.add-task-btn {
-  background-color: #635fc7;
-  color: white;
-  font-weight: 600;
-  padding: 0.75rem 1.5rem;
-  border: none;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.add-task-btn:hover {
-  background-color: #4e4ab3;
-}
-
-
 /* ========================
    Responsive Styles
 ======================== */
