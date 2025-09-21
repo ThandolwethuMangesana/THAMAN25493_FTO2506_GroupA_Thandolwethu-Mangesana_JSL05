@@ -15,7 +15,7 @@
       href="./assets/favicon.svg"
     />
     <script defer src="./scripts.js" type="module"></script>
-     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Kanban Task Management</title>
   </head>
 
@@ -45,11 +45,13 @@
             Launch Career
           </h2>
         </div>
-        <button id="add-task-btn" class="add-task-btn flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[#635fc7] text-white font-semibold hover:bg-[#4e4ab3] transition-all duration-300">
-  <span class="text-xl">+</span>
-  <span class="hidden md:inline">Add New Task</span>
-</button>
-
+        <button
+          id="add-task-btn"
+          class="add-task-btn text-[15px] flex items-center justify-center gap-2 px-4 py-2 rounded-full bg-[#635fc7] text-white font-semibold hover:bg-[#4e4ab3] transition-all duration-300"
+        >
+          <span class="text-xl">+</span>
+          <span class="hidden md:inline">Add New Task</span>
+        </button>
       </header>
 
       <div class="container">
@@ -108,5 +110,54 @@
         </select>
       </form>
     </dialog>
+ <!-- Add New Task Modal -->
+        <section id="add-task-modal-container" class="task-modal-container">
+          <div class="task-modal-content">
+            <span class="task-modal-close-btn" id="add-task-modal-close"
+              >&times;</span
+            >
+            <h2>Add New Task</h2>
+
+            <form action="" class="task-modal-form" id="add-task-form">
+              <label for="task-title">Title</label>
+              <textarea
+                type="text"
+                id="add-task-title"
+                class="task-title-input"
+                name="task-title"
+                placeholder="e.g. Start looking at the JSLPP"
+              ></textarea>
+
+              <label for="task-description">Description</label>
+              <textarea
+                type="text"
+                id="add-task-description"
+                class="task-description-input"
+                name="task-description"
+                placeholder="e.g. Set a reminder to spend time working on JSLPP"
+              ></textarea>
+
+              <label for="task-status">Status</label>
+              <select
+                name="task-status"
+                id="add-task-status"
+                class="task-status-input"
+              >
+                <option value="todo">todo</option>
+                <option value="doing">doing</option>
+                <option value="done">done</option>
+              </select>
+              <input
+                type="submit"
+                value="Create Task"
+                class="create-task-btn"
+                id="create-task-btn"
+              />
+            </form>
+            <p id="title-error-msg" class="title-error"></p>
+            <p id="description-error-msg" class="description-error"></p>
+          </div>
+        </section>
+        <!-- End of Add Task Modal -->
   </body>
 </html>

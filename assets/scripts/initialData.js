@@ -1,3 +1,4 @@
+// Initial tasks array
 export const initialTasks = [
   {
     id: 1,
@@ -40,3 +41,6 @@ export const initialTasks = [
     status: "done",
   },
 ];
+
+// Empty array for holding all of the stored tasks
+export const allTasks = [];

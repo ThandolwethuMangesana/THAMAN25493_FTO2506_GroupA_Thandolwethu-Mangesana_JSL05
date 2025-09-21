@@ -225,11 +225,11 @@ dialog {
 }
 
 /* Style the modal box */
-#task-modal::backdrop {
+#task-modal::backdrop , #new-task-modal::backdrop {
   background: rgba(0, 0, 0, 0.3);
 }
 
-#task-modal {
+#task-modal, #new-task-modal {
   top: 40%;
   left: 50%;
   transform: translate(-50%, -40%);
@@ -243,19 +243,19 @@ dialog {
 }
 
 /* Header */
-.modal-header {
+.modal-header, .new-modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 16px;
 }
 
-.modal-header h3 {
+.modal-header h3 , .new-modal-header h3{
   margin: 0;
   font-size: 1.125rem;
 }
 
-.close-btn {
+.close-btn , .new-close-btn {
   background: none;
   border: none;
   font-size: 2.5rem;
@@ -266,12 +266,12 @@ dialog {
   transition-delay: 0.1s; /* Delay before scaling */
 }
 
-.close-btn:hover {
+.close-btn:hover , .new-close-btn:hover {
   transform: scale(1.15);
   font-weight: 600;
 }
 
-.close-btn:focus {
+.close-btn:focus , .new-close-btn:focus {
   outline: none;
 }
 
