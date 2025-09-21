@@ -12,10 +12,10 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/favicon.svg"
+      href="./assets/favicon-clear.svg"
     />
-    <script defer src="./scripts.js" type="module"></script>
     <title>Kanban Task Management</title>
+    <script src="./scripts/scripts.js" type="module" defer></script>
   </head>
 
   <body>
@@ -56,10 +56,10 @@
           <div class="column-div" data-status="todo">
             <div id="todo-head-div" class="column-head-div">
               <span class="dot" id="todo-dot"></span>
-              <h4 id="toDoText" class="columnHeader">TODO (2)</h4>
+              <h4 id="toDoText" class="columnHeader">TODO (4)</h4>
             </div>
             <!-- Tasks container for TODO -->
-            <div class="tasks-container"></div>
+            <div class="tasks-container" id="todo-tasks-container"></div>
           </div>
           <!-- DOING Column -->
           <div class="column-div" data-status="doing">
@@ -68,7 +68,7 @@
               <h4 id="doingText" class="columnHeader">DOING (2)</h4>
             </div>
             <!-- Tasks container for DOING -->
-            <div class="tasks-container"></div>
+            <div class="tasks-container" id="doing-tasks-container"></div>
           </div>
           <!-- DONE Column -->
           <div class="column-div" data-status="done">
@@ -77,36 +77,68 @@
               <h4 id="doneText" class="columnHeader">DONE (2)</h4>
             </div>
             <!-- Tasks container for DONE -->
-            <div class="tasks-container"></div>
+            <div class="tasks-container" id="done-tasks-container"></div>
           </div>
         </main>
-      </div>
-    </div>
-    <!-- Modal: Displays each tasks details when the task is clicked -->
-    <dialog id="task-modal">
-      <form method="dialog" id="task-form">
-        <div class="modal-header">
-          <h3>Task</h3>
-          <button type="button" class="close-btn" id="close-modal-btn">
-            &times;
-          </button>
-        </div>
 
-        <label for="task-title">Title</label>
-        <input type="text" id="task-title" name="title" required />
+        <!-- task edit modal -->
+        <section id="task-modal-container" class="task-modal-container">
+          <div class="task-modal-content">
+            <span class="task-modal-close-btn" id="task-modal-close"
+              >&times;</span
+            >
+            <h2>Task</h2>
 
-        <label for="task-desc">Description</label>
-        <textarea id="task-desc" name="description" rows="4"></textarea>
+            <form action="" class="task-modal-form">
+              <label for="task-title">Title</label>
+              <textarea
+                type="text"
+                id="task-title"
+                class="task-title-input"
+                name="task-title"
+                required
+              ></textarea>
 
-        <label for="task-status">Status</label>
-        <select id="task-status" name="status" required>
-          <option value="todo">todo</option>
-          <option value="doing">doing</option>
-          <option value="done">done</option>
-        </select>
-      </form>
-    </dialog>
- <!-- Add New Task Modal -->
+              <label for="task-description">Description</label>
+              <textarea
+                type="text"
+                id="task-description"
+                class="task-description-input"
+                name="task-description"
+                required
+              ></textarea>
+
+              <label for="task-status">Status</label>
+              <select
+                name="task-status"
+                id="task-status"
+                class="task-status-input"
+              >
+                <option value="todo">todo</option>
+                <option value="doing">doing</option>
+                <option value="done">done</option>
+              </select>
+              <div class="task-btn-container">
+                <button
+                  id="save-changes-btn"
+                  class="save-changes-btn"
+                  type="button"
+                >
+                  Save Changes
+                </button>
+                <button
+                  id="delete-task-btn"
+                  class="delete-task-btn"
+                  type="button"
+                >
+                  Delete Task
+                </button>
+              </div>
+            </form>
+          </div>
+        </section>
+
+        <!-- Add New Task Modal -->
         <section id="add-task-modal-container" class="task-modal-container">
           <div class="task-modal-content">
             <span class="task-modal-close-btn" id="add-task-modal-close"
@@ -121,7 +153,7 @@
                 id="add-task-title"
                 class="task-title-input"
                 name="task-title"
-                placeholder="e.g. Start looking at the JSLPP"
+                placeholder="e.g. Take a chilled break"
               ></textarea>
 
               <label for="task-description">Description</label>
@@ -130,7 +162,7 @@
                 id="add-task-description"
                 class="task-description-input"
                 name="task-description"
-                placeholder="e.g. Set a reminder to spend time working on JSLPP"
+                placeholder="e.g. after completing JSL05, take a break, go for a walk to unwind"
               ></textarea>
 
               <label for="task-status">Status</label>
@@ -155,5 +187,7 @@
           </div>
         </section>
         <!-- End of Add Task Modal -->
+      </div>
+    </div>
   </body>
 </html>
